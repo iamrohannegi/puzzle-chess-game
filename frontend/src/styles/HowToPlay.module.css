@@ -1,0 +1,40 @@
+.rules {
+    margin-top: 5rem;
+}
+.rulesHeading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.rules ol {
+    list-style-type:decimal;
+    list-style-position: inside;
+}
+
+.rules ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.rules li {
+    margin-bottom: 0.5rem;
+}
+
+.ulHeading {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.rules ul li {
+    padding-left: 2rem;
+}
+
+.rules li span {
+    font-weight: 700;
+}
+
+@media (max-width: 55rem) {
+    .rules {
+        margin: 1.5rem 0;
+    }
+}

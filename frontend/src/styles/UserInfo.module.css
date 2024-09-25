@@ -1,0 +1,181 @@
+.userSection {
+    display: flex;
+    padding: 2rem 0;
+}
+
+.username {
+    font-size: 3rem;
+    word-break: break-all;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.userInfo {
+    margin-right: auto;
+}
+
+.userInfo p {
+    font-size: 1.5rem;
+}
+
+.userInfo span {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.userInfo a {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.chartHeader {
+    display: none;
+}
+.piechart {
+    --first-percentage: calc(((var(--first)  / var(--total-games)) * 100) * 1%);
+    --second-percentage: calc(((var(--second) / var(--total-games)) * 100) * 1%);
+    --third-percentage: calc(((var(--third) / var(--total-games)) * 100) * 1%);
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin: 0;
+    background: conic-gradient(
+        from 0deg,
+        #4169E1 0,
+        #4169E1 var(--first-percentage),
+        #B22222 var(--first-percentage),
+        #B22222 calc(var(--first-percentage) + var(--second-percentage)),
+        #50C878 calc(var(--first-percentage) + var(--second-percentage)),
+        #50C878 calc(var(--first-percentage) + var(--second-percentage) + var(--third-percentage)),
+        grey  calc(var(--first-percentage) + var(--second-percentage) + var(--third-percentage)),
+        grey calc(100% - var(--first-percentage) + var(--second-percentage) + var(--third-percentage))
+    );
+    position: relative;
+}
+
+.piechart::before {
+    content: "Top Three Finishes Percentages";
+    position: absolute;
+    width: 10rem; 
+    height: 10rem;
+    background-color: #DCDCE2;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.chartInfo {
+    align-self: flex-end;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.chartInfo p {
+    padding-left: 1rem;
+    position: relative;
+    display: flex;
+    font-weight: 400;
+}
+
+.chartInfo p::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border: 2px solid black;
+}
+
+.chartInfo .firstPlace::before { background-color: #4169E1; }
+.chartInfo .secondPlace::before { background-color: #B22222; }
+.chartInfo .thirdPlace::before { background-color: #50C878; }
+
+
+@media (max-width: 70rem) {
+    .username {
+        font-size: 2.4rem;
+        word-break: break-all;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .userInfo p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 48rem) {
+    .userInfo {
+        margin-bottom: 1.5rem;
+    }
+
+    .userInfo a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .userInfo a:hover {
+        transform: none;
+    }
+    .userSection {
+        display: block;
+    }
+    
+    .chart {
+        display: block;
+    }
+
+    .chartHeader {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: bold;
+        border-bottom: 3px solid black;
+        margin-bottom: 1.4rem;
+    }
+    
+    .piechart {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .piechart::before {
+        content: "";
+    }
+    
+    .chartInfo { 
+        display: flex;
+        justify-content: end;
+        padding: 0rem;
+    }
+
+    .chartInfo p:not(:first-child) {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 23rem){
+    .chartInfo {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .chartInfo p:not(:first-child) {
+        margin-left: 0;
+    }
+
+}

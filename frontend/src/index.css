@@ -1,0 +1,258 @@
+@font-face {
+  font-family: Inter; 
+  src: url(/inter-font.ttf);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Inter', serif;
+  background-color: #DCDCE2;
+}
+
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/* BUTTONS */
+
+.boxBtn {
+  cursor: pointer;
+  color: inherit;
+  padding: 0.2rem 2rem;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  background-color: #DCDCE2;
+  border: 3px solid black;
+  position: relative;
+  box-shadow: 1px 1px 0px 0px black, 2px 2px 0px 0px black, 3px 3px 0px 0px black, 4px 4px 0px 0px black, 5px 5px 0px 0px black;
+
+  transition: all .2s ease-in-out;
+}
+
+.boxBtn:hover {
+  background-color:#3d348b;
+  color: #DCDCE2;
+  transform: scale(1.1);
+}
+
+.boxBtn:active {
+  box-shadow: 0 0 0 0;
+  top: 5px;
+  left: 5px;
+}
+
+.simpleBtn {
+  background-color: black;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+/* Scrollbar */
+.custom-scrollbar::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    background-color: #1C1C1C;
+    cursor: pointer;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #313131;
+    border-radius: 5px;
+}
+
+  /* Scrollbar Buttons */
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button {
+    background-color: #1C1C1C;
+    display: block;
+    background-size: 6px;
+    background-repeat: no-repeat;
+}
+
+/* Up */
+.custom-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 12px;
+  width: 16px;
+  background-position: center 4px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+.custom-scrollbar:-webkit-scrollbar-button:single-button:vertical:decrement:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+/* Down */
+.custom-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 12px;
+  width: 16px;
+  background-position: center 5px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:vertical:increment:active {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+    /* Left */
+.custom-scrollbar::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    height: 8px;
+    width: 8px;
+    background-position: 2px 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,50 50,100 50,0'/></svg>");
+
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:horizontal:decrement:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:horizontal:decrement:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,50 50,100 50,0'/></svg>");
+}
+
+/* Right */
+.custom-scrollbar::-webkit-scrollbar-button:single-button:horizontal:increment {
+    height: 8px;
+    width:8px;
+    background-position: 3px 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:horizontal:increment:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+.custom-scrollbar::-webkit-scrollbar-button:single-button:horizontal:increment:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='0,0 0,100 50,50'/></svg>");
+}
+
+
+/* CHESS BOARD */
+.highlight-square {
+  position: relative;
+}
+.highlight-square::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(182, 182, 28, 0.6);
+}
+
+.mark{
+  position: relative;
+}
+
+.mark:before {
+  position: absolute;
+  top: -15%;
+  left: 70%;
+  width: 45px;
+  height: 45px;
+  font-size: 34px;
+  text-align: center;
+  border: 1px solid #aaa;
+  color: white;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+  z-index: 1000;
+}
+
+.checkmark:before {
+  content: '✔';
+  background: green;
+}
+
+.crossmark:before {
+  content: 'X';
+  background: red;
+}
+
+
+@media (max-width:85rem) {
+  .mark:before {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
+  }  
+}
+
+@media (max-width: 80rem) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width:40rem) {
+  .mark:before {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+  }  
+}
+
+
+@media (max-width:30rem) {
+  .mark:before {
+    width: 18px;
+    height: 18px;
+    font-size: 13px;
+  }  
+}

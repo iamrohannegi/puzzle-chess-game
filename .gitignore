@@ -1,0 +1,7 @@
+env/
+__pycache__/
+.env
+db.sqlite3
+lichess_db_puzzle.csv
+/backend/script.py 
+.vscode

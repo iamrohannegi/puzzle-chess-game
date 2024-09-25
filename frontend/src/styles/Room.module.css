@@ -1,0 +1,150 @@
+.roomCard {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.roomCard a {
+    padding: 0.25rem 1rem;
+    margin: 0.5rem 0;
+    font-size: inherit;
+}
+
+.roomLogo { 
+    width: 6rem;
+    transform: translateY(-0.5rem);
+}
+
+.roomInfo {
+
+}
+
+.roomName {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.roomName span{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    max-width: 7rem;
+}
+
+.roomMembers span {
+    font-weight: bold;
+}   
+
+@media (max-width: 44rem) {
+    .roomCard {
+        padding: 0;
+
+    }
+
+    .roomLogo { 
+        width: 5rem;
+    }
+}
+
+
+@media (max-width: 30.5rem) {
+    .roomLogo {
+        width: 4rem;
+        transform: translateX(-2px) translateY(-0.5rem);
+    }
+    
+    .roomCard:not(:last-child) {
+        border-bottom: 1px solid grey;
+        margin: 0;
+    }
+
+    .roomCard:first-child {
+        padding-top: 0;
+        padding-bottom: 0
+    }
+
+
+    .roomCard {
+        align-items: start;
+        padding: 1rem  0.5rem 0;
+    }
+
+    .roomInfo {
+        flex: 1;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 0.5fr;
+    }
+    
+    .roomInfo a {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .roomInfo a span {
+        display: none;   
+    }
+
+    .roomName span{
+        max-width: 5rem;
+    }
+    
+}
+
+@media (max-width: 23rem) {
+
+    .roomInfo {
+        display: block;
+    }
+
+    .roomCard:first-child {
+        padding-bottom: 1rem;
+    }
+
+    .roomCard {
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .roomLogo {
+        width: 5rem;
+        transform: translateX(-0.5rem);
+    }
+
+    .roomInfo a {
+        margin-top: 0.5rem;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 18rem) {
+    .roomName {
+        font-size: 1rem;
+    }
+    .roomInfo {
+        font-size: 0.9rem;
+    }
+
+    .roomLogo {
+        width: 4rem;
+    }
+
+    .roomName span{
+        max-width: 4rem;
+    }
+    
+}
+
+@media (max-width: 14rem) {
+    .roomLogo {
+        display: none;
+    }
+
+}

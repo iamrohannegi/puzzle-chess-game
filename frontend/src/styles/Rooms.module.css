@@ -1,0 +1,55 @@
+.rooms {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.roomsHeader {
+    border-bottom: 3px solid black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+}
+
+.roomsHeading {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    flex: 1;
+}
+
+.roomsHeader button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.roomCards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 44rem) {
+    .roomCards {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 35rem) {
+    .roomsHeading {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 30.5rem) {   
+
+    .roomCards {
+        display: block;
+    }
+}
+
+@media (max-width: 21rem) {
+    .roomsHeading span{
+        display: none;
+    }
+}

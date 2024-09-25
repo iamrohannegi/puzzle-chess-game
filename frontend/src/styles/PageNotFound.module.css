@@ -1,0 +1,18 @@
+.notFoundContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 4.5rem);
+    
+    background-image: url("../assets/background-image.png");
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: bottom 10px right 10px;
+}
+
+.notFoundHeading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}

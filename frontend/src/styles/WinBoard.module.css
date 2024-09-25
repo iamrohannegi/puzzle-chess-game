@@ -1,0 +1,129 @@
+.winContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.winHeading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.medals {
+    display: flex;
+}
+
+.medalContainer {
+    display: flex; 
+}
+
+.medalContainer:not(:first-child) {
+    margin-left: 5rem;
+}
+
+.medalMembers {
+    padding-top: 0.5rem;
+    font-size: 1.8rem;
+    word-break: break-all;
+}
+
+
+.medal {
+    position: relative;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+}
+  
+.medalCircle {
+    font-size: 28px;
+    font-weight: 500;
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    color: white;
+    text-align: center;
+    line-height: 46px;
+    vertical-align: middle;
+    position: relative;
+    border-width: 0.2em;
+    border-style: solid;
+    z-index: 1;
+    box-shadow: inset 0 0 0 #a7b2b8, 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-color: #edeff1;
+    text-shadow: 2px 2px 0 #98a6ad;
+    background: linear-gradient(to bottom right, #d1d7da 50%, #c3cbcf 50%);
+}
+
+.medalCircleGold {
+    box-shadow: inset 0 0 0 #b67d05, 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-color: #fadd40;
+    text-shadow: 0 0 4px #9d6c04;
+    background: linear-gradient(to bottom right, #f9ad0e 50%, #e89f06 50%);
+}
+.medalCircleSilver {
+    box-shadow: inset 0 0 0 #a7b2b8, 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-color: #edeff1;
+    text-shadow: 0px 0px 4px #98a6ad;
+    background: linear-gradient(to bottom right, #d1d7da 50%, #c3cbcf 50%);
+}
+.medalCircleBronze {
+    box-shadow: inset 0 0 0 #955405, 2px 2px 0 rgba(0, 0, 0, 0.08);
+    border-color: #f7bb23;
+    text-shadow: 0 0 4px #7d4604;
+    background: linear-gradient(to bottom right, #df7e08 50%, #c67007 50%);
+}
+
+.medalRibbon {
+    content: "";
+    display: block;
+    position: absolute;
+    border-style: solid;
+    border-width: 6px 10px;
+    width: 0;
+    height: 20px;
+    top: 50px;
+}
+
+.medalRibbonLeft {
+    border-color: #FC402D #FC402D transparent #FC402D;
+    left: 8px;
+    transform: rotate(20deg) translateZ(-32px);
+}
+
+.medalRibbonRight {
+    left: 28px;
+    border-color: #f31903 #f31903 transparent #f31903;
+    transform: rotate(-20deg) translateZ(-48px);
+}
+
+@media (max-width: 70rem) {
+    .winContainer {
+        padding-bottom: 7rem;
+    }
+
+    .medals {
+        display: block;
+    }
+
+    .medalContainer:not(:first-child) {
+        margin-left: 0;
+    }
+
+    .medalContainer {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 45rem) {
+    .winHeading {
+        font-size: 2.4rem;
+    }
+
+    .medalMembers {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,41 @@
+.board {
+    width: 45rem;
+    height: auto;
+}
+
+@media (max-height:46em) {
+    .board {
+        width: 35rem;
+    }
+}
+
+@media (max-width:85rem) {
+    .board {
+        width: 40rem;
+    }
+}
+
+@media (max-width: 70rem) {
+    .board {
+        width: 35rem;
+    }
+}
+
+@media (max-width: 55rem) {
+    .board {
+        width: 40rem;
+    }
+}
+
+
+@media (max-width: 42rem) {
+    .board {
+        width: 93vw;
+    }
+}
+
+@media (max-width: 35rem) {
+    .board {
+        width: 90vw;
+    }
+}
