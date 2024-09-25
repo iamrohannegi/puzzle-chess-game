@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 from datetime import timedelta
 from environ import Env
@@ -36,7 +37,9 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'puzzle-chess-game-backend.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://puzzle-chess-game-backend.up.railway.app']
+
 
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
@@ -130,6 +133,9 @@ DATABASES = {
     }
 }
 
+POSTGRES_LOCALLY = True
+if ENVIRONMENT == 'production' or POSTGRES_LOCALLY == True:
+    DATABASES['default'] = dj_database_url.parse(env('DATABASE_URL'))
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
