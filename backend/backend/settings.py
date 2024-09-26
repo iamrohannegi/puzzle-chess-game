@@ -115,7 +115,7 @@ CHANNEL_LAYERS = {
             "hosts": [
                 (env('REDIS_HOST', default='redis.railway.internal'), 
                  int(env('REDIS_PORT', default='6379')), 
-                 env('REDIS_PASSWORD', default=''))
+                 env('REDIS_PASS', default=''))
             ],
         },
     },
