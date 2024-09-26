@@ -117,7 +117,6 @@ CHANNEL_LAYERS = {
                  int(env('REDIS_PORT', default='6379')), 
                  env('REDIS_PASS', default='')),
             ],
-            "timeout": 50, 
         },
     },
 }
