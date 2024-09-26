@@ -20,6 +20,7 @@ from environ import Env
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = Env()
+
 Env.read_env()
 ENVIRONMENT = env('ENVIRONMENT', default='production')
 
@@ -111,13 +112,13 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [('127.0.0.1', 6379)],  # Replace with your Redis server address
+            "hosts":  [(env('REDIS_URL', default='127.0.0.1'), 6379)],  # Replace with your Redis server address
         },
     },
 }
 
-CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
-CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+CELERY_BROKER_URL = env('REDIS_URL', default='redis://127.0.0.1:6379')
+CELERY_RESULT_BACKEND = env('REDIS_URL', default='redis://127.0.0.1:6379')
 # CELERY_ACCEPT_CONTENT = ['application/json']
 # CELERY_TASK_SERIALIZER = 'json'
 # CELERY_RESULT_SERIALIZER = 'json'
