@@ -1,6 +1,7 @@
 from channels.generic.websocket import WebsocketConsumer
 from django.shortcuts import get_object_or_404
 from django.http import Http404
+from channels.exceptions import StopConsumer
 
 from django.template.loader import render_to_string
 from asgiref.sync import async_to_sync 
@@ -89,6 +90,7 @@ class GameRoomConsumer(WebsocketConsumer):
         
         print("END OF DISCONNECT")
         print(f"USERS STARS: {self.user.profile.got_first} firsts, {self.user.profile.got_second} seconds, {self.user.profile.got_third} thirds")
+        raise StopConsumer()
 
     
     def receive(self, text_data):
@@ -233,6 +235,7 @@ class LobbyConsumer(WebsocketConsumer):
         async_to_sync(self.channel_layer.group_discard)(
             self.group_name, self.channel_name
         )
+        raise StopConsumer()
 
         
     def receive(self, text_data):
