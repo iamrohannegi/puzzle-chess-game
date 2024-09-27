@@ -28,7 +28,6 @@ const Chat = (props) => {
     useEffect(() => {
         const handleKeyPress = (event) => {
             if (event.key == "Enter") {
-                console.log("Got the keypress!")
                 handleTextSubmit();
             }
         };
@@ -52,7 +51,6 @@ const Chat = (props) => {
         const currentText = inputTextRef.current.trim();
 
         if (!currentText) {
-            console.log("Got not input text");
             return "";
         }
 

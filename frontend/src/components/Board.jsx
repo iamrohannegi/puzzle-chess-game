@@ -49,7 +49,6 @@ function Board(props) {
     // Makes the copy of the current game and makes a move on board if legal
     function makeAMove(move) {
         const gameCopy = { ...game };
-        console.log(gameCopy)
         const result = gameCopy.move(move);
 
         if (result) {
@@ -64,7 +63,6 @@ function Board(props) {
         const [target, dest] = [props.solution[moveNo].slice(0, 2), props.solution[moveNo].slice(2, 4)];
 
         if ((from !== target) || (to !== dest)) {
-            console.log("Wrong move sire")
             return false;
         }
 
@@ -126,8 +124,6 @@ function Board(props) {
         // If the move follows the solution then add a checkmark followed by 
         // a function call that moves the opponent pieces to continue the puzzle
         if (validateMove(move.from, move.to)) {
-            console.log("Correct Move");
-
             // Add checkmark
             squareElt.classList.add("mark", "checkmark");
 

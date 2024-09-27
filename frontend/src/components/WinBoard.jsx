@@ -12,7 +12,6 @@ const WinBoard = (props) => {
         let prevScore = props.members[0].score;
 
         for (const member of props.members) {
-            console.log(member)
             if (member.score < prevScore) {
                 prevScore = member.score;
                 positionIdx += 1;
@@ -25,7 +24,6 @@ const WinBoard = (props) => {
             podium_members[positionIdx].push(member.name);
         }
         setPodium(podium_members)
-        console.log(podium_members)
     }, [])
 
     return (

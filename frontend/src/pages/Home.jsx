@@ -27,7 +27,6 @@ const Home = () => {
             const data = JSON.parse(e.data)
 
             if (data.type === "rooms") {
-                console.log("Received rooms", data.rooms)
                 setRoomsLoading(false)
                 setRooms(data.rooms)
             }

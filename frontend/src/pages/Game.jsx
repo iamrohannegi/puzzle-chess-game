@@ -36,13 +36,10 @@ const TestingConnect = () => {
     useEffect(() => {
         const baseUrl = import.meta.env.VITE_API_URL
         ws.current = new WebSocket(`${baseUrl}/ws/gameroom/${params.id}?token=${localStorage.getItem(ACCESS_TOKEN)}`)
-        ws.current.onopen = () => console.log("ws opened");
-        ws.current.onclose = () => console.log("ws closed");
-        
+              
         ws.current.onmessage = e => {
             const message = JSON.parse(e.data);
 
-            console.log("I got a message!")
             if (message.type === "members") {
                 setMembers(message.members);
                 checkForAdminChange(message.members);
@@ -56,7 +53,6 @@ const TestingConnect = () => {
                 setPuzzle(message.puzzle);
             } 
             else if (message.type === "win_screen") {
-                console.log("Got the winScreen set to true message")
                 setPuzzle(null);
                 setWinScreen(true);
             } 
@@ -70,7 +66,6 @@ const TestingConnect = () => {
                 // navigate("/page-not-found");
             }
 
-             console.log("e", message);
         }   
 
         const wsCurrent = ws.current;
@@ -84,16 +79,12 @@ const TestingConnect = () => {
     
     const checkForAdminChange = (users) => {
         let current_admin = null
-        console.log(users)
         for (let m of users) {
-            console.log(m)
             if ( m.isAdmin ) {
                 current_admin = m; 
-                console.log("Found admin: ", m)
                 break; 
             }
         }
-        console.log("My username:", username.current)
         if ( current_admin.name === username.current ){
             setIsAdmin(true)
         }
@@ -106,7 +97,6 @@ const TestingConnect = () => {
         
         // If there's a connection, send the text message
         if (ws) {
-            console.log("Websocket exists")
             const message = {
                 "type": "chat",
                 "body": text
@@ -117,15 +107,12 @@ const TestingConnect = () => {
 
     const handleStartButton = () => {
         const levelStr = levelSelectorRef.current.value;
-        console.log("LevelString: ", levelStr);
         const levelLimit = parseInt(levelStr, 10);
-        console.log("LevelLimit", levelLimit);
         if (Number.isNaN(levelLimit) || levelLimit < 1000 || levelLimit > 4000) {
             
             return;
         }
         
-        console.log("SHIT")
         if (ws) {
             const message = {
                 "type": "start_game",
@@ -146,9 +133,9 @@ const TestingConnect = () => {
     }
 
     const handleLevelChange = () => {
-        console.log("Level: ", levelSelectorRef.current.value);
-    }
 
+    }
+    
     const handleCopyButton = () => {
         const url = window.location.href;
         
