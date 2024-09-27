@@ -61,7 +61,7 @@ def send_random_puzzle(group, rating):
         # random_puzzle = Puzzle.objects.get(id = random_id)
         random_puzzle = fetch_puzzle(rating)
     
-    finish_by = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(seconds = 16)
+    finish_by = datetime.datetime.now(datetime.timezone.utc) + datetime.timedelta(seconds = 15)
     finish_by_str = finish_by.strftime(r'%Y-%m-%dT%H:%M:%SZ')
     data = { 
         "fen": random_puzzle["fen"], 

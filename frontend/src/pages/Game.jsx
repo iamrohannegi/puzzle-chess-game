@@ -63,7 +63,7 @@ const TestingConnect = () => {
                 setRoomName(message.name);
             }  
             else if (message.type === "game_not_found") {
-                // navigate("/page-not-found");
+                navigate("/page-not-found");
             }
 
         }   
