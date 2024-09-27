@@ -38,7 +38,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'puzzle-chess-game-backend.up.railway.app', 'puzzle-chess-game.vercel.app']
+ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'puzzle-chess-game-backend.up.railway.app', 'puzzleroyale.xyz']
 
 
 REST_FRAMEWORK = {
@@ -180,6 +180,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # local 
-    "https://puzzle-chess-game.vercel.app",  
+    "https://www.puzzleroyale.xyz",  
 ]
 CORS_ALLOWS_CREDENTIALS = True
