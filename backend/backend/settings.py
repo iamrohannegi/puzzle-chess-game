@@ -39,7 +39,6 @@ else:
 
 
 ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'puzzle-chess-game-backend.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['https://puzzle-chess-game-backend.up.railway.app']
 
 
 REST_FRAMEWORK = {
@@ -112,11 +111,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            "hosts": [
-                (env('REDIS_HOST', default='redis.railway.internal'), 
-                 int(env('REDIS_PORT', default='6379')), 
-                 env('REDIS_PASS', default='')),
-            ],
+            "hosts": [env('REDIS_URL', default='redis://127.0.0.1:6379')],
         },
     },
 }

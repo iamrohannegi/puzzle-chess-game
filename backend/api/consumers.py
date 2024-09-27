@@ -220,7 +220,7 @@ class GameRoomConsumer(WebsocketConsumer):
 
 
 class LobbyConsumer(WebsocketConsumer):
-    def connect(self):
+    def connect(self):        
         self.user = self.scope['user']
         self.group_name = "lobby"
 
