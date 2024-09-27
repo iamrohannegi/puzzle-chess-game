@@ -29,6 +29,13 @@
     flex-wrap: wrap;
 }
 
+.roomsEmpty {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5rem;
+    font-weight: 300;
+}
+
 @media (max-width: 44rem) {
     .roomCards {
         justify-content: space-between;

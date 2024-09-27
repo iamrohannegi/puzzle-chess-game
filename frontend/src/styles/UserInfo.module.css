@@ -60,7 +60,7 @@
 }
 
 .piechart::before {
-    content: "Top Three Finishes Percentages";
+    content: "Top Three Finishes";
     position: absolute;
     width: 10rem; 
     height: 10rem;

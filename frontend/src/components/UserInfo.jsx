@@ -11,7 +11,7 @@ const UserInfo = (props) => {
                 <Link to="/logout" className="boxBtn">Log out</Link>
             </div>
             <div className={styles.chart}>
-                <h4 className={styles.chartHeader}>Top Three Finishes Percentages</h4>
+                <h4 className={styles.chartHeader}>Top Three Finishes</h4>
                 <figure className={styles.piechart} style={{ "--first": props.user.first_place, "--second": props.user.second_place, "--third": props.user.third_place, "--total-games": props.user.total_games}}></figure>
                 <div className={styles.chartInfo}>
                     <p className={styles.firstPlace}>1st place</p>

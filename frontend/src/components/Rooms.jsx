@@ -12,6 +12,9 @@ const Rooms = (props) => {
                 </div>
                 <div className={styles.roomCards}>
                     {
+                        props.rooms.length <= 0 && <p className={styles.roomsEmpty}>No rooms available right now</p>
+                    }
+                    {
                         props.rooms && props.rooms.map(r => <Room roomId={r.link} roomName={r.name} roomOnline={r.members_count}/>)
                     }
                     {
