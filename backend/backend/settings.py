@@ -38,7 +38,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'puzzle-chess-game-backend.up.railway.app', 'puzzleroyale.xyz']
+ALLOWED_HOSTS = ["localhost", '127.0.0.1', 'puzzle-chess-game-backend.up.railway.app', 'puzzle-chess-game.vercel.app', 'www.puzzleroyale.xyz']
 
 
 REST_FRAMEWORK = {
