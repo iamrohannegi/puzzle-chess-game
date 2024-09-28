@@ -32,6 +32,9 @@ body {
   background-color: #DCDCE2;
 }
 
+#root {
+  height: 100vh;
+}
 
 .container {
   max-width: 80rem;

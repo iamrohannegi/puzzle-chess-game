@@ -1,7 +1,7 @@
 .room {
     background-color: #DCDCE2;
     display: flex;
-    height: calc(100vh - 4.5rem);
+    min-height: calc(100vh - 4.5rem);
 }
 
 .game {
@@ -151,6 +151,7 @@
 .members {
     width: 15rem;
 }
+
 
 
 
@@ -315,4 +316,11 @@
         overflow: initial;
         text-overflow: initial;
     }   
+}
+
+
+@media (max-height: 45rem) {
+    .room {
+        min-height: calc(100vh - 3rem);
+    }
 }

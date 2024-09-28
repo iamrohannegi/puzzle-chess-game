@@ -1,15 +1,13 @@
 .formContainer {
-    height: calc(100vh - 4.5rem);
+    min-height: calc(100vh - 4.5rem);
     display: flex;
     align-items: center;
     justify-content: center;    
     margin-top: -2rem;
+
 }
 
 
-.sideImg {
-    
-}
 
 .formInfo {
     width: 40%;
@@ -83,9 +81,18 @@
     }
 }
 
+@media (max-height: 45rem) {
+    .formContainer {
+        margin-top: 0rem;
+        padding: 3rem 0;
+    }
+}
+
 @media (max-width: 40rem) {
     .formContainer {
         display: block;
+        padding: 0;
+        margin-top: -2rem;
     }
 
     .sideImg {
@@ -125,3 +132,5 @@
         font-size: 2rem;
     }
 }
+
+
